@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WR - Auto Peças</title>
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="description" content="WR - Auto Peças">
+    <meta name="author" content="p-themes">
+    <!-- Logo -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/logo-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/logo-16x16.png">
+    <link rel="manifest" href="assets/images/icons/site.html">
+    <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#666666">
+    <link rel="shortcut icon" href="assets/images/icons/wr.ico">
+    <meta name="apple-mobile-web-app-title" content="WR">
+    <meta name="application-name" content="WR">
+    <meta name="msapplication-TileColor" content="#cc9966">
+    <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Plugins CSS Files -->
+    <link rel="stylesheet" href="assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/plugins/jquery.countdown.css">
+    <!-- Main CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/skins/skin-demo-3.css">
+    <link rel="stylesheet" href="assets/css/demos/demo-3.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="header header-intro-clearance header-3">
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-left" style="display: flex; align-items: center; gap: 15px;">
+                        <i class="icon-phone"></i> 
+                        <span>Ligue:</span>
+                        <a href="tel:+5531984421477" style="text-decoration: none; color: inherit;">(31) 98442-1477</a>
+                        <span style="border-left: 1px solid #ccc; height: 16px;"></span>
+                        <a href="tel:+553132125228" style="text-decoration: none; color: inherit;">(31) 3212-5228</a>
+                        <span style="border-left: 1px solid #ccc; height: 16px;"></span>
+                        <a href="tel:+553132125926" style="text-decoration: none; color: inherit;">(31) 3212-5926</a>
+                    </div><!-- End .header-left -->
+                    
+
+                    <div class="header-right">
+                        <ul class="top-menu">
+                            <li>
+                                <a href="#">Contatos</a>
+                                <ul>
+                                    <li>
+                                        <!-- Botão para Instagram -->
+                                        <a href="https://www.instagram.com/orgwrautopecas" target="_blank">
+                                            <i class="fab fa-instagram"></i> Instagram
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <!-- Botão para Mapa -->
+                                        <a href="https://g.co/kgs/nmxKQsw" target="_blank">
+                                            <i class="fas fa-map-marker-alt"></i> Localização
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <!-- Botão para WhatsApp -->
+                                        <a href="https://api.whatsapp.com/send?phone=31984421477&text=Ol%C3%A1,%20vim%20pelo%20site" target="_blank">
+                                            <i class="fab fa-whatsapp"></i> WhatsApp
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul><!-- End .top-menu -->
+                    </div><!-- End .header-right -->
+                    
+
+                </div><!-- End .container -->
+            </div><!-- End .header-top -->
+
+            <div class="header-middle">
+                <div class="container">
+                    <div class="header-left">
+                        <button class="mobile-menu-toggler">
+                            <span class="sr-only">Toggle mobile menu</span>
+                            <i class="icon-bars"></i>
+                        </button>
+                        
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/RTT/logo.png" alt="WR Logo" width="105" height="25">
+                        </a>
+                    </div><!-- End .header-left -->
+
+                    <div class="header-center">
+                        <div class="header-search header-search-extended header-search-visible d-none d-lg-block">
+                            <a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
+                            <form onsubmit="redirectSearch(event)">
+                                <div class="header-search-wrapper search-wrapper-wide">
+                                    <label for="q" class="sr-only">Search</label>
+                                    <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
+                                    <input type="search" class="form-control" name="q" id="q" placeholder="Search product ..." required>
+                                </div>
+                                <!-- End .header-search-wrapper -->
+                            </form>
+                        </div>
+                        <!-- End .header-search -->
+                    </div>
+                    
+                    <script>
+                        function redirectSearch(event) {
+                            event.preventDefault(); // Previne o envio padrão do formulário
+                            const baseURL = "https://wrautopecas.mercadoshops.com.br/";
+                            const query = document.getElementById("q").value.trim(); // Obtém o valor do campo de pesquisa
+                            if (query) {
+                                const searchURL = baseURL + encodeURIComponent(query); // Codifica a URL para lidar com espaços e caracteres especiais
+                                window.open(searchURL, "_blank"); // Abre o link em uma nova guia
+                            }
+                        }
+                    </script>
+
+                    <div class="header-right">
+
+                        <div class="cart-dropdown">
+                            <a href="https://wrautopecas.mercadoshops.com.br/gz/cart" class="dropdown-toggle" role="button" style="text-decoration: none;" target="_blank">
+                                <div class="icon">
+                                    <i class="icon-shopping-cart"></i>
+                                </div>
+                                <p>Carrinho</p>
+                            </a>
+                        </div>                        
+                        
+                    </div><!-- End .header-right -->
+                </div><!-- End .container -->
+            </div><!-- End .header-middle -->
+
+            <div class="header-bottom sticky-header">
+
+        </header><!-- End .header -->
+
+        <main class="main">
+            <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
+                <div class="container">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Contact us</li>
+                    </ol>
+                </div><!-- End .container -->
+            </nav><!-- End .breadcrumb-nav -->
+            <div class="container">
+	        	<div class="page-header page-header-big text-center" style="background-image: url('assets/images/contact-header-bg.png')">
+        			<h1 class="page-title text-white">Contate-nos<span class="text-white">mantenha contato conosco</span></h1>
+	        	</div><!-- End .page-header -->
+            </div><!-- End .container -->
+
+            <div class="page-content pb-0">
+                <div class="container">
+                	<div class="row">
+                		<div class="col-lg-6 mb-2 mb-lg-0">
+                			<h2 class="title mb-1">Informações de contato</h2><!-- End .title mb-2 -->
+                			<p class="mb-3">Vendemos na nossa loja física e também nas plataformas Mercado Livre e Mercado Shops, com a conveniência de comprar onde preferir!</p>
+                			<div class="row">
+                				<div class="col-sm-7">
+                					<div class="contact-info">
+                						<h3>Loja física</h3>
+
+                						<ul class="contact-list">
+                							<li>
+                								<i class="icon-map-marker"></i>
+	                							R. Abaeté, 562 - Bonfim, Belo Horizonte - MG, 31210-390
+	                						</li>
+                							<li>
+                								<i class="icon-phone"></i>
+                								<a href="tel:#">+55 (31) 98442-1477 </a>
+                							</li>
+                                            <li>
+                								<i class="icon-phone"></i>
+                								<a href="tel:#">+55 (31) 3212-5228 </a>
+                							</li>
+                                            <li>
+                								<i class="icon-phone"></i>
+                								<a href="tel:#">+55 (31) 3212-5926 </a>
+                							</li>
+                							<li>
+                								<i class="icon-envelope"></i>
+                								<a href="mailto:#">orgwrautopecas@hotmail.com</a>
+                							</li>
+                						</ul><!-- End .contact-list -->
+                					</div><!-- End .contact-info -->
+                				</div><!-- End .col-sm-7 -->
+
+                				<div class="col-sm-5">
+                                    <div class="contact-info">
+                                        <h3>Onde nos encontrar</h3>
+                                
+                                        <ul class="contact-list">
+                                            <li>
+                                                <i class="icon-shopping-cart"></i>
+                                                <a href="https://wrautopecas.mercadoshops.com.br" target="_blank" class="text-dark">Mercado Shops</a>
+                                            </li>
+                                            <li>
+                                                <i class="icon-shopping-cart"></i>
+                                                <a href="https://lista.mercadolivre.com.br/_CustId_454223336?item_id=MLB3831673779&category_id=MLB193531&seller_id=454223336&client=recoview-selleritems&recos_listing=true" target="_blank" class="text-dark">Mercado Livre</a>
+                                            </li>
+                                        </ul><!-- End .contact-list -->
+                                    </div><!-- End .contact-info -->
+                                </div><!-- End .col-sm-5 -->
+                                
+                			</div><!-- End .row -->
+                		</div><!-- End .col-lg-6 -->
+                		<div class="col-lg-6">
+                            <h2 class="title mb-1">Tem alguma pergunta?</h2><!-- End .title mb-2 -->
+                            <p class="mb-2">Utilize o formulário abaixo para entrar em contato com a equipe de vendas pelo WhatsApp</p>
+                        
+                            <form action="#" class="contact-form mb-3" onsubmit="generateWhatsAppLink(event)">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label for="cname" class="sr-only">Nome</label>
+                                        <input type="text" class="form-control" id="cname" placeholder="Nome *" required>
+                                    </div><!-- End .col-sm-6 -->
+                        
+                                    <div class="col-sm-6">
+                                        <label for="ccity" class="sr-only">Cidade</label>
+                                        <input type="text" class="form-control" id="ccity" placeholder="Cidade *" required>
+                                    </div><!-- End .col-sm-6 -->
+                                </div><!-- End .row -->
+                        
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="cmessage" class="sr-only">Mensagem</label>
+                                        <textarea class="form-control" cols="30" rows="4" id="cmessage" required placeholder="Mensagem *"></textarea>
+                                    </div><!-- End .col-12 -->
+                                </div><!-- End .row -->
+                        
+                                <button type="submit" class="btn btn-outline-primary-2 btn-minwidth-sm">
+                                    <span>ENVIAR</span>
+                                    <i class="icon-long-arrow-right"></i>
+                                </button>
+                            </form><!-- End .contact-form -->
+                        </div><!-- End .col-lg-6 -->
+                        
+                        <script>
+                            function generateWhatsAppLink(event) {
+                                event.preventDefault(); // Impede o envio padrão do formulário
+                        
+                                const name = document.getElementById("cname").value.trim();
+                                const city = document.getElementById("ccity").value.trim();
+                                const message = document.getElementById("cmessage").value.trim();
+                        
+                                // Formatação da mensagem com "Estou vindo pelo site" depois da cidade
+                                const formattedMessage = encodeURIComponent(
+                                    `Olá, meu nome é ${name}, sou de ${city}. Estou vindo pelo site.\n${message}`
+                                );
+                        
+                                // Número do WhatsApp para o qual a mensagem será enviada
+                                const whatsappNumber = "+553184421477";
+                        
+                                // Link do WhatsApp com a mensagem pré-formatada
+                                const whatsappLink = `https://wa.me/${whatsappNumber}?text=${formattedMessage}`;
+                        
+                                // Abre o WhatsApp com a mensagem pré-preenchida
+                                window.open(whatsappLink, '_blank');
+                            }
+                        </script>
+                        
+                	</div><!-- End .row -->
+
+                	<hr class="mt-4 mb-5">
+
+                	
+                </div><!-- End .container -->
+            	<!-- Mapa -->
+                <div id="map" style="height: 400px; width: 100%; margin-bottom: 20px;">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15005.017851046034!2d-43.95251499432554!3d-19.91367898014397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa697502e20a17f%3A0xba916f05af482d3b!2sR.%20Abaet%C3%A9%2C%20562%20-%20Bonfim%2C%20Belo%20Horizonte%20-%20MG%2C%2031210-390!5e0!3m2!1spt-BR!2sbr!4v1733924822799!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div><!-- End #map -->
+            </div><!-- End .page-content -->
+        </main><!-- End .main -->
+
+        <footer class="footer">
+        	<div class="footer-middle">
+	            <div class="container">
+	            	<div class="row">
+	            		<div class="col-sm-6 col-lg-3">
+	            			<div class="widget widget-about">
+	            				<img src="assets/images/RTT/logo.png" class="footer-logo" alt="Footer Logo" width="105" height="25">
+	            				<p>Tudo o que seu carro precisa, em um só lugar! </p>
+
+	            				<div class="widget-call">
+                                    <i class="icon-phone"></i>
+                                    Tem alguma pergunta?
+                                    <a href="tel:#">(31) 98442-1477 </a>         
+                                </div><!-- End .widget-call -->
+	            			</div><!-- End .widget about-widget -->
+	            		</div><!-- End .col-sm-6 col-lg-3 -->
+
+	            		<div class="col-sm-6 col-lg-3">
+	            			<div class="widget">
+	            				<h4 class="widget-title">Links úteis</h4><!-- End .widget-title -->
+
+	            				<ul class="widget-list">
+	            					<li><a href="https://api.whatsapp.com/send?phone=31984421477&text=Ol%C3%A1,%20vim%20pelo%20site">WhatsApp</a></li>
+                                    <li><a href="https://wrautopecas.mercadoshops.com.br/">Mercado Shops</a></li>
+                                    <li><a href="https://lista.mercadolivre.com.br/_CustId_454223336?item_id=MLB3831673779&category_id=MLB193531&seller_id=454223336&client=recoview-selleritems&recos_listing=true">Mercado Livre</a></li>
+	            					<li><a href="https://www.instagram.com/orgwrautopecas/">Instagram</a></li>
+	            					<li><a href="contact.html">Contate-nos</a></li>
+	            				</ul><!-- End .widget-list -->
+	            			</div><!-- End .widget -->
+	            		</div><!-- End .col-sm-6 col-lg-3 -->
+
+	            		<div class="col-sm-6 col-lg-3">
+	            			<div class="widget">
+	            				<h4 class="widget-title">Atendimento ao Cliente</h4><!-- End .widget-title -->
+
+	            				<ul class="widget-list">
+	            					<li><a href="https://www.mercadolivre.com.br/ajuda/Como-pagar-a-sua-compra_923">Métodos de pagamento</a></li>
+	            					<li><a href="https://www.mercadolivre.com.br/institucional/nos-fazemos/compra-garantida#:~:text=%C3%89%20um%20programa%20que%20garante,conting%C3%AAncia%20ao%20receber%20a%20compra.&text=Com%20Compra%20Garantida%2C%20o%20dinheiro,est%C3%A1%20seguro%20o%20tempo%20todo.&text=Se%20o%20usu%C3%A1rio%20n%C3%A3o%20receber,o%20usu%C3%A1rio%20efetuou%20a%20compra.">Garantia de devolução do dinheiro!</a></li>
+	            					<li><a href="https://www.mercadolivre.com.br/ajuda/politicas-devolucion_16914">Devoluções</a></li>
+	            					<li><a href="https://www.mercadolivre.com.br/ajuda/Como-receber-ou-retirar-o-produto_924">Envio</a></li>
+	            					<li><a href="https://centrodepartners.mercadolivre.com.br/termos-e-condicoes">Termos e Condições</a></li>
+	            					<li><a href="https://www.mercadolivre.com.br/privacidade">Política de Privacidade</a></li>
+	            				</ul><!-- End .widget-list -->
+	            			</div><!-- End .widget -->
+	            		</div><!-- End .col-sm-6 col-lg-3 -->
+
+	            		<div class="col-sm-6 col-lg-3">
+	            			<div class="widget">
+	            				<h4 class="widget-title">Minha conta</h4><!-- End .widget-title -->
+
+	            				<ul class="widget-list">
+                                    <li><a href="https://www.mercadolivre.com/jms/mlb/lgz/login">Conta Mercado Livre</a></li>
+	            					<li><a href="https://wrautopecas.mercadoshops.com.br/gz/cart">Carrinho Mercado Shops</a></li>
+	            					<li><a href="https://www.mercadolivre.com.br/gz/cart/v2">Carrinho Mercado Livre</a></li>
+	            					<li><a href="https://myaccount.mercadolivre.com.br/purchases/list#nav-header">Rastrear meu pedido</a></li>
+	            					<li><a href="https://www.mercadolivre.com.br/ajuda">Ajuda</a></li>
+	            				</ul><!-- End .widget-list -->
+	            			</div><!-- End .widget -->
+	            		</div><!-- End .col-sm-6 col-lg-3 -->
+	            	</div><!-- End .row -->
+	            </div><!-- End .container -->
+	        </div><!-- End .footer-middle -->
+
+	        <div class="footer-bottom">
+	        	<div class="container">
+	        		<p class="footer-copyright">Copyright © 2024 WR Auto Peças. Todos os direitos reservados.</p><!-- End .footer-copyright -->
+	        		<figure class="footer-payments">
+	        			<img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
+	        		</figure><!-- End .footer-payments -->
+	        	</div><!-- End .container -->
+	        </div><!-- End .footer-bottom -->
+        </footer><!-- End .footer -->
+    </div><!-- End .page-wrapper -->
+    <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
+
+    <!-- Plugins JS File -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.hoverIntent.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/superfish.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/bootstrap-input-spinner.js"></script>
+    <script src="assets/js/jquery.plugin.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/demos/demo-3.js"></script>
+</body>
+
+</html>

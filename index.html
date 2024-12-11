@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WR - Auto Peças</title>
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="description" content="WR - Auto Peças">
+    <meta name="author" content="p-themes">
+    <!-- Logo -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/logo-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/logo-16x16.png">
+    <link rel="manifest" href="assets/images/icons/site.html">
+    <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#666666">
+    <link rel="shortcut icon" href="assets/images/icons/wr.ico">
+    <meta name="apple-mobile-web-app-title" content="WR">
+    <meta name="application-name" content="WR">
+    <meta name="msapplication-TileColor" content="#cc9966">
+    <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Plugins CSS Files -->
+    <link rel="stylesheet" href="assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/plugins/jquery.countdown.css">
+    <!-- Main CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/skins/skin-demo-3.css">
+    <link rel="stylesheet" href="assets/css/demos/demo-3.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="header header-intro-clearance header-3">
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-left" style="display: flex; align-items: center; gap: 15px;">
+                        <i class="icon-phone"></i> 
+                        <span>Ligue:</span>
+                        <a href="tel:+5531984421477" style="text-decoration: none; color: inherit;">(31) 98442-1477</a>
+                        <span style="border-left: 1px solid #ccc; height: 16px;"></span>
+                        <a href="tel:+553132125228" style="text-decoration: none; color: inherit;">(31) 3212-5228</a>
+                        <span style="border-left: 1px solid #ccc; height: 16px;"></span>
+                        <a href="tel:+553132125926" style="text-decoration: none; color: inherit;">(31) 3212-5926</a>
+                    </div><!-- End .header-left -->
+                    
+
+                    <div class="header-right">
+                        <ul class="top-menu">
+                            <li>
+                                <a href="#">Contatos</a>
+                                <ul>
+                                    <li>
+                                        <!-- Botão para Instagram -->
+                                        <a href="https://www.instagram.com/orgwrautopecas" target="_blank">
+                                            <i class="fab fa-instagram"></i> Instagram
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <!-- Botão para Mapa -->
+                                        <a href="https://g.co/kgs/nmxKQsw" target="_blank">
+                                            <i class="fas fa-map-marker-alt"></i> Localização
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <!-- Botão para WhatsApp -->
+                                        <a href="https://api.whatsapp.com/send?phone=31984421477&text=Ol%C3%A1,%20vim%20pelo%20site" target="_blank">
+                                            <i class="fab fa-whatsapp"></i> WhatsApp
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul><!-- End .top-menu -->
+                    </div><!-- End .header-right -->
+                    
+
+                </div><!-- End .container -->
+            </div><!-- End .header-top -->
+
+            <div class="header-middle">
+                <div class="container">
+                    <div class="header-left">
+                        <button class="mobile-menu-toggler">
+                            <span class="sr-only">Toggle mobile menu</span>
+                            <i class="icon-bars"></i>
+                        </button>
+                        
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/RTT/logo.png" alt="WR Logo" width="105" height="25">
+                        </a>
+                    </div><!-- End .header-left -->
+
+                    <div class="header-center">
+                        <div class="header-search header-search-extended header-search-visible d-none d-lg-block">
+                            <a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
+                            <form onsubmit="redirectSearch(event)">
+                                <div class="header-search-wrapper search-wrapper-wide">
+                                    <label for="q" class="sr-only">Search</label>
+                                    <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
+                                    <input type="search" class="form-control" name="q" id="q" placeholder="Search product ..." required>
+                                </div>
+                                <!-- End .header-search-wrapper -->
+                            </form>
+                        </div>
+                        <!-- End .header-search -->
+                    </div>
+                    
+                    <script>
+                        function redirectSearch(event) {
+                            event.preventDefault(); // Previne o envio padrão do formulário
+                            const baseURL = "https://wrautopecas.mercadoshops.com.br/";
+                            const query = document.getElementById("q").value.trim(); // Obtém o valor do campo de pesquisa
+                            if (query) {
+                                const searchURL = baseURL + encodeURIComponent(query); // Codifica a URL para lidar com espaços e caracteres especiais
+                                window.open(searchURL, "_blank"); // Abre o link em uma nova guia
+                            }
+                        }
+                    </script>
+
+                    <div class="header-right">
+
+                        <div class="cart-dropdown">
+                            <a href="https://wrautopecas.mercadoshops.com.br/gz/cart" class="dropdown-toggle" role="button" style="text-decoration: none;" target="_blank">
+                                <div class="icon">
+                                    <i class="icon-shopping-cart"></i>
+                                </div>
+                                <p>Carrinho</p>
+                            </a>
+                        </div>                        
+                        
+                    </div><!-- End .header-right -->
+                </div><!-- End .container -->
+            </div><!-- End .header-middle -->
+
+            <div class="header-bottom sticky-header">
+
+        </header><!-- End .header -->
+
+        <main class="main">
+            <div class="intro-section pt-3 pb-3 mb-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="intro-slider-container slider-container-ratio mb-2 mb-lg-0">
+                                <div class="intro-slider owl-carousel owl-simple owl-dark owl-nav-inside" data-toggle="owl" data-owl-options='{
+                                        "nav": false, 
+                                        "dots": true,
+                                        "responsive": {
+                                            "768": {
+                                                "nav": true,
+                                                "dots": false
+                                            }
+                                        }
+                                    }'>
+                                    <div class="intro-slide">
+                                        <figure class="slide-image">
+                                            <picture>
+                                                <source media="(max-width: 480px)" srcset="assets/images/RTT/slider/slide-1-480w.jpg">
+                                                <img src="assets/images/RTT/slider/slide-1.jpg" alt="Image Desc">
+                                            </picture>
+                                        </figure><!-- End .slide-image -->
+
+                                        <div class="intro-content">
+                                            <h3 class="intro-subtitle text-primary" style="text-shadow: 2px 2px 5px black;">Ofertas Diárias</h3><!-- End .h3 intro-subtitle -->
+                                            <h1 class="intro-title text-primary" style="text-shadow: 2px 2px 5px black;">
+                                                Óleo Lubrificante
+                                            </h1><!-- End .intro-title -->
+                                        
+                                            <div class="intro-price">
+                                                <sup class="text-primary" style="text-shadow: 2px 2px 5px black;">A partir de:</sup>
+                                                <span class="text-primary" style="text-shadow: 2px 2px 5px black;">
+                                                    R$21<sup>.99</sup>
+                                                </span>
+                                            </div><!-- End .intro-price -->
+                                        
+                                            <a href="https://api.whatsapp.com/send?phone=31984421477&text=Ol%C3%A1,%20vim%20pelo%20site" class="btn btn-primary btn-round">
+                                                <span class="text-white">Clique Aqui</span>
+                                                <i class="icon-long-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                        
+                                        
+                                    </div><!-- End .intro-slide -->
+
+                                    <div class="intro-slide">
+                                        <figure class="slide-image">
+                                            <picture>
+                                                <source media="(max-width: 480px)" srcset="assets/images/RTT/slider/slide-2-480w.jpg">
+                                                <img src="assets/images/RTT/slider/slide-2.jpg" alt="Image Desc">
+                                            </picture>
+                                        </figure><!-- End .slide-image -->
+
+                                        <div class="intro-content">
+                                            <h3 class="intro-subtitle text-primary" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Ofertas e promoções</h3><!-- End .h3 intro-subtitle -->
+                                            <h1 class="intro-title text-primary" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);">
+                                                Palhetas <br>Limpador Parabrisa
+                                            </h1><!-- End .intro-title -->
+                                        
+                                            <div class="intro-price">
+                                                <sup class="intro-old-price" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">R$76,99</sup>
+                                                <span class="text-primary" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                                                    $55<sup>.99</sup>
+                                                </span>
+                                            </div><!-- End .intro-price -->
+                                        
+                                            <a href="https://api.whatsapp.com/send?phone=31984421477&text=Ol%C3%A1,%20vim%20pelo%20site" class="btn btn-primary btn-round">
+                                                <span class="text-white">Clique aqui</span>
+                                                <i class="icon-long-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                        
+                                    </div><!-- End .intro-slide -->
+                                </div><!-- End .intro-slider owl-carousel owl-simple -->
+                                
+                                <span class="slider-loader"></span><!-- End .slider-loader -->
+                            </div><!-- End .intro-slider-container -->
+                        </div><!-- End .col-lg-8 -->
+
+                        <div class="col-lg-4">
+                            <div class="intro-banners">
+                                <div class="banner mb-lg-1 mb-xl-2">
+                                    <a href="#">
+                                        <img src="assets/images/RTT/banners/banner-1.jpg" alt="Banner">
+                                    </a>
+                        
+                                    <div class="banner-content">
+                                        <h4 class="banner-subtitle d-lg-none d-xl-block" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);"><a href="#">Top Vendas</a></h4><!-- End .banner-subtitle -->
+                                        <h3 class="banner-title" style="text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);"><a href="#">Correias <br>Dentada - Alternador</a></h3><!-- End .banner-title -->
+                                        <a href="https://api.whatsapp.com/send?phone=31984421477&text=Ol%C3%A1,%20vim%20pelo%20site" class="banner-link" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);">
+                                            Compre agora<i class="icon-long-arrow-right"></i>
+                                        </a>                                        
+                                    </div><!-- End .banner-content -->
+                                </div><!-- End .banner -->
+                        
+                                <div class="banner mb-lg-1 mb-xl-2">
+                                    <a href="#">
+                                        <img src="assets/images/RTT/banners/banner-2.jpg" alt="Banner">
+                                    </a>
+                        
+                                    <div class="banner-content">
+                                        <h4 class="banner-subtitle d-lg-none d-xl-block" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);"><a href="#">Segurança</a></h4><!-- End .banner-subtitle -->
+                                        <h3 class="banner-title" style="text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);"><a href="#">Limpador Parabrisa <span>Economize $$</span></a></h3><!-- End .banner-title -->
+                                        <a href="https://api.whatsapp.com/send?phone=31984421477&text=Ol%C3%A1,%20vim%20pelo%20site" class="banner-link" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);">
+                                            Compre agora<i class="icon-long-arrow-right"></i>
+                                        </a>
+                                    </div><!-- End .banner-content -->
+                                </div><!-- End .banner -->
+                        
+                                <div class="banner mb-0">
+                                    <a href="#">
+                                        <img src="assets/images/RTT/banners/banner-3.jpg" alt="Banner">
+                                    </a>
+                        
+                                    <div class="banner-content">
+                                        <h4 class="banner-subtitle d-lg-none d-xl-block" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);"><a href="#">Motor</a></h4><!-- End .banner-subtitle -->
+                                        <h3 class="banner-title" style="text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);"><a href="#">Manuntenção completa <span>Peças de revisão</span></a></h3><!-- End .banner-title -->
+                                        <a href="https://api.whatsapp.com/send?phone=31984421477&text=Ol%C3%A1,%20vim%20pelo%20site" class="banner-link" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);">
+                                            Compre agora<i class="icon-long-arrow-right"></i>
+                                        </a>
+                                    </div><!-- End .banner-content -->
+                                </div><!-- End .banner -->
+                            </div><!-- End .intro-banners -->
+                        </div>
+                        
+                                        
+                                    </div><!-- End .banner-content -->
+                                </div><!-- End .banner -->
+                            </div><!-- End .intro-banners -->
+                        </div><!-- End .col-lg-4 -->
+                    </div><!-- End .row -->
+                </div><!-- End .container -->
+            </div><!-- End .intro-section -->
+
+            <div class="container">
+                <div class="cta cta-border cta-border-image mb-5 mb-lg-7" style="background-image: url(assets/images/RTT/bg-1.jpg);">
+                    <div class="cta-border-wrapper bg-white">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 col-xl-11">
+                                <div class="cta-content">
+                                    <div class="cta-heading">
+                                        <h3 class="cta-title text-right"><span class="text-primary">Novas ofertas</span> <br>Compre online com segurança e pague com Mercado Pago!</h3><!-- End .cta-title -->
+                                    </div><!-- End .cta-heading -->
+                                    
+                                    <div class="cta-text">
+                                        <p>Ganhe <span class="text-dark font-weight-normal">FRETE GRÁTIS* e descontos</span> em <br>cada pedido com o programa de entregas do Mercado Livre</p>
+                                    </div><!-- End .cta-text -->
+                                    <a href="https://lista.mercadolivre.com.br/_CustId_454223336?item_id=MLB3831673779&category_id=MLB193531&seller_id=454223336&client=recoview-selleritems&recos_listing=true" class="btn btn-primary btn-round"><span>Mercado Livre</span><i class="icon-long-arrow-right"></i></a>
+                                </div><!-- End .cta-content -->
+                            </div><!-- End .col-xl-7 -->
+                        </div><!-- End .row -->
+                    </div><!-- End .bg-white -->
+                </div><!-- End .cta -->
+            </div><!-- End .container -->
+
+            
+            <div class="icon-boxes-container mt-2 mb-2 bg-transparent">
+                <div class="container">
+                    <!-- Adicionando o título -->
+                    <div class="text-center mb-3">
+                        <h4 class="font-weight-bold">Benefícios Mercado Livre</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="icon-box icon-box-side">
+                                <span class="icon-box-icon text-dark">
+                                    <i class="icon-rocket"></i>
+                                </span>
+                                <div class="icon-box-content">
+                                    <h3 class="icon-box-title">Frete Grátis</h3><!-- End .icon-box-title -->
+                                    <p>Pedidos de R$79 ou mais</p>
+                                </div><!-- End .icon-box-content -->
+                            </div><!-- End .icon-box -->
+                        </div><!-- End .col-sm-6 col-lg-3 -->
+
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="icon-box icon-box-side">
+                                <span class="icon-box-icon text-dark">
+                                    <i class="icon-rotate-left"></i>
+                                </span>
+
+                                <div class="icon-box-content">
+                                    <h3 class="icon-box-title">Devoluções Grátis</h3><!-- End .icon-box-title -->
+                                    <p>Dentro de 30 dias</p>
+                                </div><!-- End .icon-box-content -->
+                            </div><!-- End .icon-box -->
+                        </div><!-- End .col-sm-6 col-lg-3 -->
+
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="icon-box icon-box-side">
+                                <span class="icon-box-icon text-dark">
+                                    <i class="icon-info-circle"></i>
+                                </span>
+
+                                <div class="icon-box-content">
+                                    <h3 class="icon-box-title">Descontos</h3><!-- End .icon-box-title -->
+                                    <p>Menor preço na plataforma</p>
+                                </div><!-- End .icon-box-content -->
+                            </div><!-- End .icon-box -->
+                        </div><!-- End .col-sm-6 col-lg-3 -->
+
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="icon-box icon-box-side">
+                                <span class="icon-box-icon text-dark">
+                                    <i class="icon-life-ring"></i>
+                                </span>
+
+                                <div class="icon-box-content">
+                                    <h3 class="icon-box-title">Suporte</h3><!-- End .icon-box-title -->
+                                    <p>Chat das 08h às 20h todos os dias</p>
+                                </div><!-- End .icon-box-content -->
+                            </div><!-- End .icon-box -->
+                        </div><!-- End .col-sm-6 col-lg-3 -->
+                    </div><!-- End .row -->
+                </div><!-- End .container -->
+            </div><!-- End .icon-boxes-container -->
+
+        </main><!-- End .main -->
+
+        <footer class="footer">
+        	<div class="footer-middle">
+	            <div class="container">
+	            	<div class="row">
+	            		<div class="col-sm-6 col-lg-3">
+	            			<div class="widget widget-about">
+	            				<img src="assets/images/RTT/logo.png" class="footer-logo" alt="Footer Logo" width="105" height="25">
+	            				<p>Tudo o que seu carro precisa, em um só lugar! </p>
+
+	            				<div class="widget-call">
+                                    <i class="icon-phone"></i>
+                                    Tem alguma pergunta?
+                                    <a href="tel:#">(31) 98442-1477 </a>         
+                                </div><!-- End .widget-call -->
+	            			</div><!-- End .widget about-widget -->
+	            		</div><!-- End .col-sm-6 col-lg-3 -->
+
+	            		<div class="col-sm-6 col-lg-3">
+	            			<div class="widget">
+	            				<h4 class="widget-title">Links úteis</h4><!-- End .widget-title -->
+
+	            				<ul class="widget-list">
+	            					<li><a href="https://api.whatsapp.com/send?phone=31984421477&text=Ol%C3%A1,%20vim%20pelo%20site">WhatsApp</a></li>
+                                    <li><a href="https://wrautopecas.mercadoshops.com.br/">Mercado Shops</a></li>
+                                    <li><a href="https://lista.mercadolivre.com.br/_CustId_454223336?item_id=MLB3831673779&category_id=MLB193531&seller_id=454223336&client=recoview-selleritems&recos_listing=true">Mercado Livre</a></li>
+	            					<li><a href="https://www.instagram.com/orgwrautopecas/">Instagram</a></li>
+	            					<li><a href="contact.html">Contate-nos</a></li>
+	            				</ul><!-- End .widget-list -->
+	            			</div><!-- End .widget -->
+	            		</div><!-- End .col-sm-6 col-lg-3 -->
+
+	            		<div class="col-sm-6 col-lg-3">
+	            			<div class="widget">
+	            				<h4 class="widget-title">Atendimento ao Cliente</h4><!-- End .widget-title -->
+
+	            				<ul class="widget-list">
+	            					<li><a href="https://www.mercadolivre.com.br/ajuda/Como-pagar-a-sua-compra_923">Métodos de pagamento</a></li>
+	            					<li><a href="https://www.mercadolivre.com.br/institucional/nos-fazemos/compra-garantida#:~:text=%C3%89%20um%20programa%20que%20garante,conting%C3%AAncia%20ao%20receber%20a%20compra.&text=Com%20Compra%20Garantida%2C%20o%20dinheiro,est%C3%A1%20seguro%20o%20tempo%20todo.&text=Se%20o%20usu%C3%A1rio%20n%C3%A3o%20receber,o%20usu%C3%A1rio%20efetuou%20a%20compra.">Garantia de devolução do dinheiro!</a></li>
+	            					<li><a href="https://www.mercadolivre.com.br/ajuda/politicas-devolucion_16914">Devoluções</a></li>
+	            					<li><a href="https://www.mercadolivre.com.br/ajuda/Como-receber-ou-retirar-o-produto_924">Envio</a></li>
+	            					<li><a href="https://centrodepartners.mercadolivre.com.br/termos-e-condicoes">Termos e Condições</a></li>
+	            					<li><a href="https://www.mercadolivre.com.br/privacidade">Política de Privacidade</a></li>
+	            				</ul><!-- End .widget-list -->
+	            			</div><!-- End .widget -->
+	            		</div><!-- End .col-sm-6 col-lg-3 -->
+
+	            		<div class="col-sm-6 col-lg-3">
+	            			<div class="widget">
+	            				<h4 class="widget-title">Minha conta</h4><!-- End .widget-title -->
+
+	            				<ul class="widget-list">
+                                    <li><a href="https://www.mercadolivre.com/jms/mlb/lgz/login">Conta Mercado Livre</a></li>
+	            					<li><a href="https://wrautopecas.mercadoshops.com.br/gz/cart">Carrinho Mercado Shops</a></li>
+	            					<li><a href="https://www.mercadolivre.com.br/gz/cart/v2">Carrinho Mercado Livre</a></li>
+	            					<li><a href="https://myaccount.mercadolivre.com.br/purchases/list#nav-header">Rastrear meu pedido</a></li>
+	            					<li><a href="https://www.mercadolivre.com.br/ajuda">Ajuda</a></li>
+	            				</ul><!-- End .widget-list -->
+	            			</div><!-- End .widget -->
+	            		</div><!-- End .col-sm-6 col-lg-3 -->
+	            	</div><!-- End .row -->
+	            </div><!-- End .container -->
+	        </div><!-- End .footer-middle -->
+
+	        <div class="footer-bottom">
+	        	<div class="container">
+	        		<p class="footer-copyright">Copyright © 2024 WR Auto Peças. Todos os direitos reservados.</p><!-- End .footer-copyright -->
+	        		<figure class="footer-payments">
+	        			<img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
+	        		</figure><!-- End .footer-payments -->
+	        	</div><!-- End .container -->
+	        </div><!-- End .footer-bottom -->
+        </footer><!-- End .footer -->
+    </div><!-- End .page-wrapper -->
+    <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
+
+    <!-- Plugins JS File -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.hoverIntent.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/superfish.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/bootstrap-input-spinner.js"></script>
+    <script src="assets/js/jquery.plugin.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/demos/demo-3.js"></script>
+</body>
+
+</html>
