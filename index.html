@@ -88,15 +88,16 @@
             <div class="header-middle">
                 <div class="container">
                     <div class="header-left">
-                        
                         <a href="index.html" class="logo">
                             <img src="assets/images/RTT/logo.png" alt="WR Logo" width="105" height="25">
                         </a>
                     </div><!-- End .header-left -->
-
+            
                     <div class="header-center">
-                        <div class="header-search header-search-extended header-search-visible d-lg-block"> <!-- Remova o d-none -->
-                            <a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
+                        <div class="header-search header-search-extended header-search-visible" id="search-form">
+                            <a href="https://wrautopecas.mercadoshops.com.br" class="search-toggle" role="button" id="mobile-search">
+                                <i class="icon-search"></i>
+                            </a>
                             <form onsubmit="redirectSearch(event)">
                                 <div class="header-search-wrapper search-wrapper-wide">
                                     <label for="q" class="sr-only">Search</label>
@@ -105,8 +106,8 @@
                                 </div>
                             </form>
                         </div>
-                    </div>                    
-                    
+                    </div><!-- End .header-center -->
+            
                     <script>
                         function redirectSearch(event) {
                             event.preventDefault(); // Previne o envio padrão do formulário
@@ -117,10 +118,26 @@
                                 window.open(searchURL, "_blank"); // Abre o link em uma nova guia
                             }
                         }
+            
+                        // Função para redirecionar para o link de pesquisa (versão mobile)
+                        document.getElementById("mobile-search").addEventListener("click", function() {
+                            const baseURL = "https://wrautopecas.mercadoshops.com.br/";
+                            const query = document.getElementById("q") ? document.getElementById("q").value.trim() : ''; // Pega a pesquisa, se houver
+                            if (query) {
+                                window.location.href = baseURL + encodeURIComponent(query);
+                            } else {
+                                window.location.href = baseURL; // Se não houver consulta, só leva ao link base
+                            }
+                        });
                     </script>
-
+            
                     <div class="header-right">
-
+                        <div class="search-icon-mobile">
+                            <a href="https://wrautopecas.mercadoshops.com.br" class="search-toggle" role="button" id="mobile-search">
+                                <i class="icon-search"></i>
+                            </a>
+                        </div> 
+            
                         <div class="cart-dropdown">
                             <a href="https://wrautopecas.mercadoshops.com.br/gz/cart" class="dropdown-toggle" role="button" style="text-decoration: none;" target="_blank">
                                 <div class="icon">
@@ -128,12 +145,11 @@
                                 </div>
                                 <p>Carrinho</p>
                             </a>
-                        </div>                        
-                        
+                        </div>  
                     </div><!-- End .header-right -->
                 </div><!-- End .container -->
             </div><!-- End .header-middle -->
-
+            
             <div class="header-bottom sticky-header">
 
         </header><!-- End .header -->
