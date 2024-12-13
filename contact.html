@@ -48,7 +48,6 @@
                         <a href="tel:+553132125926" style="text-decoration: none; color: inherit;">(31) 3212-5926</a>
                     </div><!-- End .header-left -->
                     
-
                     <div class="header-right">
                         <ul class="top-menu">
                             <li>
@@ -89,25 +88,24 @@
             <div class="header-middle">
                 <div class="container">
                     <div class="header-left">
-                        
                         <a href="index.html" class="logo">
                             <img src="assets/images/RTT/logo.png" alt="WR Logo" width="105" height="25">
                         </a>
                     </div><!-- End .header-left -->
-
+            
+                    <!-- Barra de pesquisa funcional para desktop -->
                     <div class="header-center">
-                        <div class="header-search header-search-extended header-search-visible d-lg-block"> <!-- Remova o d-none -->
-                            <a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
+                        <div class="header-search header-search-extended header-search-visible" id="search-form">
                             <form onsubmit="redirectSearch(event)">
                                 <div class="header-search-wrapper search-wrapper-wide">
                                     <label for="q" class="sr-only">Search</label>
                                     <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
-                                    <input type="search" class="form-control" name="q" id="q" placeholder="Search product ..." required>
+                                    <input type="search" class="form-control" name="q" id="q" placeholder="Pesquisar produto..." required>
                                 </div>
                             </form>
                         </div>
-                    </div>                    
-                    
+                    </div><!-- End .header-center -->
+            
                     <script>
                         function redirectSearch(event) {
                             event.preventDefault(); // Previne o envio padrão do formulário
@@ -119,9 +117,15 @@
                             }
                         }
                     </script>
-
+            
+                    <!-- Botão de pesquisa mobile (somente abre o link) -->
                     <div class="header-right">
-
+                        <div class="search-icon-mobile">
+                            <button id="mobile-search-button" class="search-toggle" role="button" onclick="window.open('https://wrautopecas.mercadoshops.com.br', '_blank');">
+                                <i class="icon-search"></i> <!-- Ícone de pesquisa visível no mobile -->
+                            </button>
+                        </div> 
+            
                         <div class="cart-dropdown">
                             <a href="https://wrautopecas.mercadoshops.com.br/gz/cart" class="dropdown-toggle" role="button" style="text-decoration: none;" target="_blank">
                                 <div class="icon">
@@ -129,11 +133,42 @@
                                 </div>
                                 <p>Carrinho</p>
                             </a>
-                        </div>                        
-                        
+                        </div>  
                     </div><!-- End .header-right -->
                 </div><!-- End .container -->
             </div><!-- End .header-middle -->
+            
+            <!-- Adicionando CSS para remover o quadrado ao redor do ícone no mobile e adicionar sombra -->
+            <style>
+                /* Remover borda e fundo do botão */
+                .search-icon-mobile button {
+                    background: transparent; /* Sem fundo */
+                    border: none; /* Sem borda */
+                    padding: 0; /* Remover o padding extra */
+                    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
+                }
+            
+                /* Garantir que o ícone se ajuste corretamente */
+                .search-icon-mobile i {
+                    font-size: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+                    color: inherit; /* Herda a cor do botão ou do tema */
+                    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra no ícone para destacar */
+                }
+            
+                /* Estilo para a versão desktop */
+                .header-search button {
+                    background: transparent;
+                    border: none;
+                    padding: 0;
+                    cursor: pointer;
+                }
+            
+                /* Sombra no ícone de pesquisa na versão desktop */
+                .header-search i {
+                    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra no ícone */
+                }
+            </style>
+            
 
             <div class="header-bottom sticky-header">
 
