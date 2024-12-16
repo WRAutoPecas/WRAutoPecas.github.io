@@ -202,6 +202,19 @@
                         </div>
                     </div>
             
+                    <!-- Seção opcional para Carro e Placa -->
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label for="carro" class="form-label">Carro (Opcional)</label>
+                            <input type="text" class="form-control" id="carro" placeholder="Modelo do carro">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="placa" class="form-label">Placa (Opcional)</label>
+                            <input type="text" class="form-control" id="placa" placeholder="Placa do carro">
+                            <small class="form-text text-muted">* A placa será utilizada apenas para pesquisa do modelo e versão do carro.</small>
+                        </div>
+                    </div>
+            
                     <div id="produtos-container">
                         <!-- Primeira linha de produto com campo de quantidade simples -->
                         <div class="row mt-3 produto-item" id="produto-1">
@@ -296,10 +309,25 @@
             
                         const nome = document.getElementById("nome").value.trim();
                         const cidade = document.getElementById("cidade").value.trim();
+                        const carro = document.getElementById("carro").value.trim();
+                        const placa = document.getElementById("placa").value.trim();
                         const produtos = document.querySelectorAll("input[name='produto[]']");
                         const quantidades = document.querySelectorAll("input[name='quantidade[]']");
-                        let mensagem = `Olá, meu nome é ${nome}, sou de ${cidade}. Estou interessado nos seguintes produtos:`;
+                        let mensagem = `Olá, meu nome é ${nome}, sou de ${cidade}.`;
             
+                        // Verifica se o carro foi preenchido
+                        if (carro) {
+                            mensagem += ` Meu carro é o(a) ${carro}.`;
+                        }
+            
+                        // Verifica se a placa foi preenchida
+                        if (placa) {
+                            mensagem += ` A placa do meu carro é a ${placa}.`;
+                        }
+            
+                        mensagem += `\nGostaria do orçamento dos seguintes produtos:`;
+            
+                        // Adiciona os produtos e quantidades
                         produtos.forEach((produto, index) => {
                             const quantidade = quantidades[index].value;
                             mensagem += `\n- ${produto.value} (Quantidade: ${quantidade})`;
