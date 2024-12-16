@@ -196,9 +196,13 @@
                             <label for="nome" class="form-label">Nome *</label>
                             <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <label for="cidade" class="form-label">Cidade *</label>
                             <input type="text" class="form-control" id="cidade" placeholder="Sua cidade" required>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="estado" class="form-label">Estado</label>
+                            <input type="text" class="form-control" id="estado" placeholder="UF">
                         </div>
                     </div>
             
@@ -309,15 +313,23 @@
             
                         const nome = document.getElementById("nome").value.trim();
                         const cidade = document.getElementById("cidade").value.trim();
+                        const estado = document.getElementById("estado").value.trim();
                         const carro = document.getElementById("carro").value.trim();
                         const placa = document.getElementById("placa").value.trim();
                         const produtos = document.querySelectorAll("input[name='produto[]']");
                         const quantidades = document.querySelectorAll("input[name='quantidade[]']");
-                        let mensagem = `Olá, meu nome é ${nome}, sou de ${cidade}.`;
+                        let mensagem = `Olá, meu nome é ${nome}, sou de ${cidade}`;
+            
+                        // Adiciona o estado se preenchido
+                        if (estado) {
+                            mensagem += `, ${estado}.`;
+                        } else {
+                            mensagem += `.`;
+                        }
             
                         // Verifica se o carro foi preenchido
                         if (carro) {
-                            mensagem += ` Meu carro é o(a) ${carro}.`;
+                            mensagem += ` Meu carro é o ${carro}.`;
                         }
             
                         // Verifica se a placa foi preenchida
@@ -343,6 +355,7 @@
                     });
                 });
             </script>
+            
             
             <!-- Fim Orçamento -->
 
