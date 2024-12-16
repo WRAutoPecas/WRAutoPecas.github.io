@@ -172,152 +172,154 @@
 
             <div class="header-bottom sticky-header">
 
-        </header><!-- End .header -->
+            </header><!-- End .header -->
 
-        <main class="main">
-            <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
-                <div class="container">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Página inicial</a></li>
-                        <li class="breadcrumb-item"><a href="https://wrautopecas.mercadoshops.com.br/">Loja</a></li>
-                        <li class="breadcrumb-item"><a href="orcamento.html">Orçamento</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Contato</li>
-                    </ol>
-                </div><!-- End .container -->
-            </nav><!-- End .breadcrumb-nav -->
-            <div class="container">
-	        	<div class="page-header page-header-big text-center" style="background-image: url('assets/images/contact-header-bg.png')">
-        			<h1 class="page-title text-white">Contate-nos<span class="text-white">mantenha contato conosco</span></h1>
-	        	</div><!-- End .page-header -->
-            </div><!-- End .container -->
+            <main class="main">
+                <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
+                    <div class="container">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Página inicial</a></li>
+                            <li class="breadcrumb-item"><a href="https://wrautopecas.mercadoshops.com.br/">Loja</a></li>
+                            <li class="breadcrumb-item"><a href="contact.html">Contato</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Orçamento</li>
+                        </ol>
+                    </div><!-- End .container -->
+                </nav><!-- End .breadcrumb-nav -->
+
+            <!-- Começo Orçamento -->
+
+            <div class="container mt-5">
+                <h1 class="text-center">Orçamento</h1>
+                <form id="orcamento-form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="nome" class="form-label">Nome *</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cidade" class="form-label">Cidade *</label>
+                            <input type="text" class="form-control" id="cidade" placeholder="Sua cidade" required>
+                        </div>
+                    </div>
+            
+                    <div id="produtos-container">
+                        <!-- Primeira linha de produto com campo de quantidade simples -->
+                        <div class="row mt-3 produto-item" id="produto-1">
+                            <div class="col-md-6">
+                                <label for="produto-1" class="form-label">Produto *</label>
+                                <input type="text" class="form-control" id="produto-1" name="produto[]" placeholder="Nome do produto" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="quantidade-1" class="form-label">Quantidade *</label>
+                                <input type="number" class="form-control text-center" id="quantidade-1" name="quantidade[]" value="1" min="1" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="adicionar-produto" class="form-label">&nbsp;</label>
+                                <button type="button" class="btn btn-success btn-adicionar-produto w-100">Adicionar Produto</button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Botão de enviar -->
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-warning btn-block">ENVIAR ORÇAMENTO →</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const produtosContainer = document.getElementById('produtos-container');
+                    let produtoCount = 1;
+            
+                    document.addEventListener('click', (event) => {
+                        if (event.target.classList.contains('btn-adicionar-produto')) {
+                            produtoCount++;
+                            const produtoItem = document.createElement('div');
+                            produtoItem.classList.add('row', 'mt-2', 'produto-item');
+                            produtoItem.innerHTML = `
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="produto-${produtoCount}" name="produto[]" placeholder="Nome do produto" required>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="input-group input-spinner">
+                                        <div class="input-group-prepend">
+                                            <button style="min-width: 26px" class="btn btn-decrement btn-spinner" type="button" data-action="decrement">
+                                                <i class="icon-minus"></i>
+                                            </button>
+                                        </div>
+                                        <input type="text" class="form-control text-center" id="quantidade-${produtoCount}" name="quantidade[]" value="1" required="" style="text-align: center">
+                                        <div class="input-group-append">
+                                            <button style="min-width: 26px" class="btn btn-increment btn-spinner" type="button" data-action="increment">
+                                                <i class="icon-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-success btn-adicionar-produto w-50">Adicionar</button>
+                                        <button type="button" class="btn btn-danger btn-remover-produto w-50">Remover</button>
+                                    </div>
+                                </div>
+                            `;
+                            produtosContainer.appendChild(produtoItem);
+                        }
+            
+                        // Função para remover um produto
+                        if (event.target.classList.contains('btn-remover-produto')) {
+                            const produtoItem = event.target.closest('.produto-item');
+                            if (produtoItem) produtoItem.remove();
+                        }
+            
+                        // Função para incrementar ou decrementar a quantidade
+                        if (event.target.classList.contains('btn-increment')) {
+                            const input = event.target.closest('.input-group').querySelector('input');
+                            let value = parseInt(input.value);
+                            value = isNaN(value) ? 1 : value + 1;
+                            input.value = value;
+                        }
+            
+                        if (event.target.classList.contains('btn-decrement')) {
+                            const input = event.target.closest('.input-group').querySelector('input');
+                            let value = parseInt(input.value);
+                            value = isNaN(value) ? 1 : Math.max(1, value - 1); // Impede que o valor fique menor que 1
+                            input.value = value;
+                        }
+                    });
+            
+                    // Função para gerar o link do WhatsApp
+                    document.getElementById("orcamento-form").addEventListener("submit", function(event) {
+                        event.preventDefault(); // Impede o envio padrão do formulário
+            
+                        const nome = document.getElementById("nome").value.trim();
+                        const cidade = document.getElementById("cidade").value.trim();
+                        const produtos = document.querySelectorAll("input[name='produto[]']");
+                        const quantidades = document.querySelectorAll("input[name='quantidade[]']");
+                        let mensagem = `Olá, meu nome é ${nome}, sou de ${cidade}. Estou interessado nos seguintes produtos:`;
+            
+                        produtos.forEach((produto, index) => {
+                            const quantidade = quantidades[index].value;
+                            mensagem += `\n- ${produto.value} (Quantidade: ${quantidade})`;
+                        });
+            
+                        // Formatação da mensagem
+                        const formattedMessage = encodeURIComponent(mensagem);
+                        const whatsappNumber = "+553184421477"; // Número do WhatsApp
+                        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${formattedMessage}`;
+            
+                        // Abre o WhatsApp com a mensagem pré-preenchida
+                        window.open(whatsappLink, "_blank");
+                    });
+                });
+            </script>
+            
+            <!-- Fim Orçamento -->
 
             <div class="page-content pb-0">
-                <div class="container">
-                	<div class="row">
-                		<div class="col-lg-6 mb-2 mb-lg-0">
-                			<h2 class="title mb-1">Informações de contato</h2><!-- End .title mb-2 -->
-                			<p class="mb-3">Vendemos na nossa loja física e também nas plataformas Mercado Livre e Mercado Shops, com a conveniência de comprar onde preferir!</p>
-                			<div class="row">
-                				<div class="col-sm-7">
-                					<div class="contact-info">
-                						<h3>Loja física</h3>
-
-                						<ul class="contact-list">
-                							<li>
-                								<i class="icon-map-marker"></i>
-	                							R. Abaeté, 562 - Bonfim, Belo Horizonte - MG, 31210-390
-	                						</li>
-                							<li>
-                								<i class="icon-phone"></i>
-                								<a href="tel:#">+55 (31) 98442-1477 </a>
-                							</li>
-                                            <li>
-                								<i class="icon-phone"></i>
-                								<a href="tel:#">+55 (31) 3212-5228 </a>
-                							</li>
-                                            <li>
-                								<i class="icon-phone"></i>
-                								<a href="tel:#">+55 (31) 3212-5926 </a>
-                							</li>
-                							<li>
-                								<i class="icon-envelope"></i>
-                								<a href="mailto:#">orgwrautopecas@hotmail.com</a>
-                							</li>
-                						</ul><!-- End .contact-list -->
-                					</div><!-- End .contact-info -->
-                				</div><!-- End .col-sm-7 -->
-
-                				<div class="col-sm-5">
-                                    <div class="contact-info">
-                                        <h3>Onde nos encontrar</h3>
-                                
-                                        <ul class="contact-list">
-                                            <li>
-                                                <i class="icon-shopping-cart"></i>
-                                                <a href="https://wrautopecas.mercadoshops.com.br" target="_blank" class="text-dark">Mercado Shops</a>
-                                            </li>
-                                            <li>
-                                                <i class="icon-shopping-cart"></i>
-                                                <a href="https://lista.mercadolivre.com.br/_CustId_454223336?item_id=MLB3831673779&category_id=MLB193531&seller_id=454223336&client=recoview-selleritems&recos_listing=true" target="_blank" class="text-dark">Mercado Livre</a>
-                                            </li>
-                                        </ul><!-- End .contact-list -->
-                                    </div><!-- End .contact-info -->
-                                </div><!-- End .col-sm-5 -->
-                                
-                			</div><!-- End .row -->
-                		</div><!-- End .col-lg-6 -->
-                		<div class="col-lg-6">
-                            <h2 class="title mb-1">Tem alguma pergunta?</h2><!-- End .title mb-2 -->
-                            <p class="mb-2">Utilize o formulário abaixo para entrar em contato com a equipe de vendas pelo WhatsApp</p>
-                        
-                            <form action="#" class="contact-form mb-3" onsubmit="generateWhatsAppLink(event)">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label for="cname" class="sr-only">Nome</label>
-                                        <input type="text" class="form-control" id="cname" placeholder="Nome *" required>
-                                    </div><!-- End .col-sm-6 -->
-                        
-                                    <div class="col-sm-6">
-                                        <label for="ccity" class="sr-only">Cidade</label>
-                                        <input type="text" class="form-control" id="ccity" placeholder="Cidade *" required>
-                                    </div><!-- End .col-sm-6 -->
-                                </div><!-- End .row -->
-                        
-                                <div class="row">
-                                    <div class="col-12">
-                                        <label for="cmessage" class="sr-only">Mensagem</label>
-                                        <textarea class="form-control" cols="30" rows="4" id="cmessage" required placeholder="Mensagem *"></textarea>
-                                    </div><!-- End .col-12 -->
-                                </div><!-- End .row -->
-                        
-                                <button type="submit" class="btn btn-outline-primary-2 btn-minwidth-sm">
-                                    <span>ENVIAR</span>
-                                    <i class="icon-long-arrow-right"></i>
-                                </button>
-                            </form><!-- End .contact-form -->
-                        </div><!-- End .col-lg-6 -->
-                        
-                        <script>
-                            function generateWhatsAppLink(event) {
-                                event.preventDefault(); // Impede o envio padrão do formulário
-                        
-                                const name = document.getElementById("cname").value.trim();
-                                const city = document.getElementById("ccity").value.trim();
-                                const message = document.getElementById("cmessage").value.trim();
-                        
-                                // Formatação da mensagem com "Estou vindo pelo site" depois da cidade
-                                const formattedMessage = encodeURIComponent(
-                                    `Olá, meu nome é ${name}, sou de ${city}. Estou vindo pelo site.\n${message}`
-                                );
-                        
-                                // Número do WhatsApp para o qual a mensagem será enviada
-                                const whatsappNumber = "+553184421477";
-                        
-                                // Link do WhatsApp com a mensagem pré-formatada
-                                const whatsappLink = `https://wa.me/${whatsappNumber}?text=${formattedMessage}`;
-                        
-                                // Abre o WhatsApp com a mensagem pré-preenchida
-                                window.open(whatsappLink, '_blank');
-                            }
-                        </script>
-                        
-                	</div><!-- End .row -->
-
-                	<hr class="mt-4 mb-5">
-
-                	
-                </div><!-- End .container -->
-            	<!-- Mapa -->
-                <div id="map" style="height: 400px; width: 100%; margin-bottom: 20px;">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15005.017851046034!2d-43.95251499432554!3d-19.91367898014397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa697502e20a17f%3A0xba916f05af482d3b!2sR.%20Abaet%C3%A9%2C%20562%20-%20Bonfim%2C%20Belo%20Horizonte%20-%20MG%2C%2031210-390!5e0!3m2!1spt-BR!2sbr!4v1733924822799!5m2!1spt-BR!2sbr" 
-                        width="100%" 
-                        height="400" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
-                </div><!-- End #map -->
+                
             </div><!-- End .page-content -->
         </main><!-- End .main -->
 
