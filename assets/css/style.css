@@ -56,3 +56,103 @@
         display: block; /* A pesquisa está sempre visível em telas grandes */
     }
 }
+
+/* Remove qualquer transparência que mostre o fundo (WR) */
+.wide-popup-border {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+}
+
+.wide-market-hero {
+    background: #0b4371; /* Cor sólida para bloquear o fundo WR */
+    background: linear-gradient(135deg, #0b4371 0%, #007991 100%);
+    padding: 60px 40px;
+    color: #ffffff;
+    position: relative;
+    border-radius: 15px;
+}
+
+.wide-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.wide-text-side { flex: 1; }
+
+.wide-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.text-yellow { color: #ffc107; }
+
+.wide-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.9);
+}
+
+/* Botões */
+.wide-actions { display: flex; gap: 15px; }
+
+.btn-wide-primary {
+    background: #ff8f00;
+    color: white !important;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-wide-secondary {
+    border: 1px solid white;
+    color: white !important;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* Visual */
+.wide-visual-side { flex: 1; display: flex; justify-content: center; }
+
+.wide-logo-wrapper {
+    position: relative;
+    width: 250px;
+}
+
+.wide-logo { width: 100%; height: auto; }
+
+.wide-tag {
+    position: absolute;
+    background: white;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    white-space: nowrap;
+}
+
+.tag-1 { top: -20px; right: 0; }
+.tag-2 { top: 45%; right: -40px; }
+.tag-3 { bottom: -10px; left: 10%; }
+
+/* Botão Fechar */
+.wide-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+}

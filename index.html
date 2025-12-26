@@ -428,6 +428,46 @@
 	        </div><!-- End .footer-bottom -->
         </footer><!-- End .footer -->
     </div><!-- End .page-wrapper -->
+
+    <!-- Hero Popup Modal -->
+    <div class="modal fade" id="heroPopup" tabindex="-1" role="dialog" aria-labelledby="heroPopupLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content wide-popup-border">
+                <div class="modal-body p-0">
+                    <section class="wide-market-hero">
+                        <div class="wide-container">
+                            <div class="wide-text-side">
+                                <h1 class="wide-title">
+                                    <span class="text-yellow">Os Melhores Preços</span><br>
+                                    em Lojas Oficiais
+                                </h1>
+                                <p class="wide-description">
+                                    A <strong>Wide Market</strong> reúne os melhores sites de compra com os melhores preços do mercado. Compre direto nas lojas oficiais com o melhor indicativo de preço!
+                                </p>
+                                <div class="wide-actions">
+                                    <a href="products.html" class="btn-wide-primary">Ver Produtos</a>
+                                    <a href="courses.html" class="btn-wide-secondary">Explorar Cursos</a>
+                                </div>
+                            </div>
+
+                            <div class="wide-visual-side">
+                                <div class="wide-logo-wrapper">
+                                    <img src="https://widemarket.onrender.com/static/img/logo_large_erase.png" alt="Wide Market Logo" class="wide-logo">
+                                    
+                                    <div class="wide-tag tag-1">💰 Melhor Preço</div>
+                                    <div class="wide-tag tag-2">🏪 Loja Oficial</div>
+                                    <div class="wide-tag tag-3">✅ Confiável</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="wide-close" data-dismiss="modal">×</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
     <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
 
     <!-- Plugins JS File -->
@@ -444,6 +484,14 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/demos/demo-3.js"></script>
+
+    <!-- Hero Popup Script -->
+    <script>
+        $(document).ready(function() {
+            // Show the hero popup modal on page load
+            $('#heroPopup').modal('show');
+        });
+    </script>
 </body>
 
 </html>
