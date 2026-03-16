@@ -27,10 +27,48 @@
     <link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/plugins/jquery.countdown.css">
-    <!-- Main CSS Files -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/skins/skin-demo-3.css">
-    <link rel="stylesheet" href="assets/css/demos/demo-3.css">
+        <!-- Main CSS Files -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/skins/skin-demo-3.css">
+        <link rel="stylesheet" href="assets/css/demos/demo-3.css">
+        <style>
+            #scroll-top {
+                position: fixed !important;
+                bottom: 20px !important;
+                right: 20px !important;
+                z-index: 9999 !important;
+                width: 5rem;
+                height: 5rem;
+                color: #cccccc;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                line-height: 1;
+                visibility: hidden;
+                opacity: 0;
+                border-radius: 0;
+                border: none;
+                background-color: #fafafa;
+                font-size: 3rem;
+                transition: all 0.4s ease;
+                transform: translateY(60px);
+            }
+            #scroll-top.show {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+            }
+            #scroll-top:hover, #scroll-top:focus {
+                color: #777;
+                background-color: #eaeaea;
+            }
+            @media screen and (min-width: 768px) {
+                #scroll-top {
+                    display: flex;
+                }
+            }
+        </style>
 </head>
 
 <body>
@@ -103,8 +141,7 @@
             
             
 
-            <div class="header-bottom sticky-header">
-
+            <div class="header-bottom sticky-header"></div>
         </header>
 
         <main class="main">
@@ -238,15 +275,9 @@
                                 </div><!-- End .banner -->
                             </div><!-- End .intro-banners -->
                         </div>
-                        
-                                        
-                                    </div><!-- End .banner-content -->
-                                </div><!-- End .banner -->
-                            </div><!-- End .intro-banners -->
-                        </div><!-- End .col-lg-4 -->
-                    </div><!-- End .row -->
-                </div><!-- End .container -->
-            </div><!-- End .intro-section -->
+                    </div>
+                </div>
+            </div>
 
             <!-- Começo orçamento -->
 
@@ -290,63 +321,59 @@
                     </div><!-- End .bg-white -->
                 </div><!-- End .cta -->
             </div><!-- End .container -->
-            -->
+
             
 
-        </main><!-- End .main -->
+        </main>
 
-        <footer class="footer">
-    <div class="footer-middle">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-lg-4">
-                    <div class="widget widget-about">
-                        <img src="assets/images/RTT/logo.png" class="footer-logo" alt="Footer Logo" width="105" height="25">
-                        <p>Tudo o que seu carro precisa, em um só lugar!</p>
-                        <div class="widget-call">
-                            <i class="icon-phone"></i>
-                            Tem alguma pergunta?
-                            <a href="tel:+5531989539740">(31) 98953-9740</a>         
+            <footer class="footer">
+                <div class="footer-middle">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="widget widget-about">
+                                    <img src="assets/images/RTT/logo.png" class="footer-logo" alt="Footer Logo" width="105" height="25">
+                                    <p>Tudo o que seu carro precisa, em um só lugar!</p>
+                                    <div class="widget-call">
+                                        <i class="icon-phone"></i>
+                                        Tem alguma pergunta?
+                                        <a href="tel:+5531989539740">(31) 98953-9740</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="widget">
+                                    <h4 class="widget-title">Links úteis</h4>
+                                    <ul class="widget-list">
+                                        <li><a href="https://api.whatsapp.com/send?phone=31989539740&text=Ol%C3%A1,%20vim%20pelo%20site!" target="_blank">WhatsApp</a></li>
+                                        <li><a href="https://www.instagram.com/orgwrautopecas/" target="_blank">Instagram</a></li>
+                                        <li><a href="contact.html" target="_blank">Contate-nos</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="widget">
+                                    <h4 class="widget-title">Atendimento</h4>
+                                    <p>Loja Física em Belo Horizonte<br>
+                                    Segunda a Sexta: 08:00 às 18:00</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <div class="widget">
-                        <h4 class="widget-title">Links úteis</h4>
-                        <ul class="widget-list">
-                            <li><a href="https://api.whatsapp.com/send?phone=31989539740&text=Ol%C3%A1,%20vim%20pelo%20site!" target="_blank">WhatsApp</a></li>
-                            <li><a href="https://www.instagram.com/orgwrautopecas/" target="_blank">Instagram</a></li>
-                            <li><a href="contact.html" target="_blank">Contate-nos</a></li>
-                        </ul>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <p class="footer-copyright">Copyright © WR Auto Peças. Todos os direitos reservados.</p>
+                        <figure class="footer-payments">
+                            <img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
+                        </figure>
                     </div>
                 </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <div class="widget">
-                        <h4 class="widget-title">Atendimento</h4>
-                        <p>Loja Física em Belo Horizonte<br>
-                        Segunda a Sexta: 08:00 às 18:00</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </footer>
     </div>
-
-    <div class="footer-bottom">
-        <div class="container">
-            <p class="footer-copyright">Copyright © WR Auto Peças. Todos os direitos reservados.</p>
-            <figure class="footer-payments">
-                <img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
-            </figure>
-        </div>
-    </div>
-</footer>
-    </div><!-- End .page-wrapper -->
 
     <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
 
-    <!-- Plugins JS File -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.hoverIntent.min.js"></script>
@@ -357,7 +384,6 @@
     <script src="assets/js/jquery.plugin.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/jquery.countdown.min.js"></script>
-    <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/demos/demo-3.js"></script>
 </body>
